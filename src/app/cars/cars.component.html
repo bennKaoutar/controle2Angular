@@ -1,38 +1,32 @@
 
 <link href="..//cars/cars.component.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<style>
-    .btn-product{
-	width: 100%;
-}
-</style>
 
-<div class="container">
-    <div class="row">
-    	<div class="col-md-12">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail" >
-                    <h4 class="text-center"><span class="label label-info">new car</span></h4>
-                    
-                    <img [src]="item.image" class="img-responsive">
-                    
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-6 col-xs-6">
-								<h3>CAR</h3>
-							</div>
-							<div class="col-md-6 col-xs-6 price">
-								<h3>{{ item.n_matricule }}</h3>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-sm-6 col-md-4"  *ngFor="let item of cars">
+							<div class="thumbnail" >
+								<h4 class="text-center"><span class="label label-info">new car</span></h4>
+								<img [src]="item.image" class="img-responsive">
+								<div class="caption">
+									<div class="row">
+										<div class="col-md-6 col-xs-6">
+											<h3>CAR</h3>
+										</div>
+										<div class="col-md-6 col-xs-6 price">
+											<h3>{{ item.n_matricule }}</h3>
+										</div>
+									</div>
+										<div class="col-md-6">
+											<button (click)="goToCarsDetail(item)" class="btn btn-success btn-product" class="glyphicon glyphicon-shopping-cart"> Show details</button></div>
+									</div>
+									
+			
+									<p> </p>
+								</div>
 							</div>
 						</div>
-						
-							<div class="col-md-6">
-                                <span class="ad-btn" (click)="goToCarsDetail(item)" style="cursor: pointer;">Show details</span>
-                            </div>
-						</div>
-
-						
-					</div>
-				</div>
-            </div>
-            </div>
