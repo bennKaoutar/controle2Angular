@@ -1,1 +1,36 @@
-<p>car-details works!</p>
+<link href="..//car-details/car-details.component.css" rel="stylesheet" id="bootstrap-css">
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 bg-primary p-2 text-white mt-2 text-center text-capitalize">
+            product details page 
+        </div>
+    </div>
+    <div class="row mt-4">
+        
+        <div class="col-lg-4 text-center border-right border-secondery">
+            <div class="tab-content row h-100 d-flex justify-content-center align-items-center" id="myTabContent">
+                <div class="tab-pane fade col-lg-12" id="productThree" role="tabpanel" aria-labelledby="productThree-tab">
+                    <img class="img-fluid" [src]="car.image" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <h5>
+                {{ car.n_matricule }}
+            </h5>
+            <h5>
+                {{ car.couleur }}
+            </h5>
+            <h5>
+                Marque : {{ car.marque }}
+            </h5>
+            <h5>
+                Numero de siege : {{car.n_sieges}}
+            </h5>
+           
+        </div>
+    </div>
+</div>
